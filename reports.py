@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 import os
-from reportlab.platypus import SimpleDocTemplate, Paragraph, Spacer, Table, Image
+from reportlab.platypus import SimpleDocTemplate, Paragraph, Spacer
 from reportlab.lib.styles import getSampleStyleSheet
 
 def generate_report():
