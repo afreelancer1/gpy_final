@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-import os
+import os, datetime
 from reportlab.platypus import SimpleDocTemplate, Paragraph, Spacer
 from reportlab.lib.styles import getSampleStyleSheet
 
@@ -14,7 +14,7 @@ def generate_report():
       with open(json_path + "/" + i, 'r') as f:
         ln = f.readlines()
         rrr += "<br/> <br/> name: " +  ln[0].strip() + "<br/> weight: " + ln[1].strip()
-  report_title = Paragraph("Processed Update on 9/6/2020", styles["h1"])
+  report_title = Paragraph("Processed Update on " + str(datetime.datetime.now()), styles["h1"])
   report_table = Paragraph(rrr, styles["Normal"])
   report.build([report_title, report_table])
 
